@@ -25,7 +25,6 @@ public class CalculatorOneGUI {
         panel.add(b4);
         fr.add(panel);
         fr.add(ta3);
-        fr.pack();
         fr.setSize(300,180);
         fr.setVisible(true);
         
