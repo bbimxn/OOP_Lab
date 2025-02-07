@@ -9,6 +9,8 @@ public class TellerGUI {
     public TellerGUI(){
         
         JPanel panel = new JPanel();
+        JPanel panel2 = new JPanel();
+        JPanel panel3 = new JPanel();
         
         fr = new JFrame("Teller GUI");
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -21,20 +23,30 @@ public class TellerGUI {
         JButton b2 = new JButton("Withdraw");
         JButton b3 = new JButton("Exit");
         
-        fr.setLayout(new GridLayout(3,2));
-        fr.add(l);
-        fr.add(tf);
-        fr.add(l2);
-        fr.add(tf2);
+        fr.setLayout(new GridLayout(4,1));
+        
+        
+        panel2.setLayout(new GridLayout(1,2));
+        panel2.add(l);
+        panel2.add(tf);
+        fr.add(panel2);
+        
+        panel3.setLayout(new GridLayout(1,2));
+        panel3.add(l2);
+        panel3.add(tf2);
+        fr.add(panel3);
         
         panel.setLayout(new FlowLayout());
         panel.add(b1);
         panel.add(b2);
         panel.add(b3);
         fr.add(panel);
-        
-        fr.pack();
-        fr.setSize(500,200);
+
+        fr.setSize(270,200);
         fr.setVisible(true);
     }
+    public static void main(String[] args) {
+        new TellerGUI();
+    }
 }
+
