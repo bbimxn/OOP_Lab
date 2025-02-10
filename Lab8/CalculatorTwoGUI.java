@@ -1,11 +1,13 @@
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class CalculatorTwoGUI {
+public class CalculatorTwoGUI implements ActionListener {
     private JFrame fr;
     private JTextField tf;
     
-    public CalculatorTwoGUI(){
+    public CalculatorTwoGUI() {
         JPanel panel = new JPanel();
         
         fr = new JFrame("My Calculator");
@@ -39,8 +41,37 @@ public class CalculatorTwoGUI {
         panel.add(b9); panel.add(b10); panel.add(b11); panel.add(b12);
         panel.add(b13); panel.add(b14); panel.add(b15); panel.add(b16);
         fr.add(panel);
+        
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
+        b4.addActionListener(this);
+        b5.addActionListener(this);
+        b6.addActionListener(this);
+        b7.addActionListener(this);
+        b8.addActionListener(this);
+        b9.addActionListener(this);
+        b10.addActionListener(this);
+        b11.addActionListener(this);
+        b12.addActionListener(this);
+        b13.addActionListener(this);
+        b14.addActionListener(this);
+        b15.addActionListener(this);
+        b16.addActionListener(this);
+        
 
         fr.setSize(250,300);
         fr.setVisible(true);
+    }
+    
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource().equals(b4)){
+            System.out.println("+");
+        }
+        else if (e.getSource().equals(b8)){
+             System.out.println("-");
+        }
     }
 }
